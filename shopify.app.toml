@@ -1,0 +1,25 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "a5c9363a15f2f5a39de6d53c9cfade74"
+name = "test-app-lcp"
+handle = "test-app-lcp"
+application_url = "https://traffic-equipped-episode-oct.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "helixo-dev-s-faris.myshopify.com"
+include_config_on_deploy = true
+
+[auth]
+redirect_urls = [
+  "https://traffic-equipped-episode-oct.trycloudflare.com/auth/callback",
+  "https://traffic-equipped-episode-oct.trycloudflare.com/auth/shopify/callback",
+  "https://traffic-equipped-episode-oct.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2025-01"
+
+[pos]
+embedded = true
