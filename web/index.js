@@ -4,6 +4,7 @@ import { readFileSync } from "fs";
 import express from "express";
 import serveStatic from "serve-static";
 import dotenv from "dotenv";
+dotenv.config();
 import shopify from "./shopify.js";
 import productCreator from "./product-creator.js";
 import PrivacyWebhookHandlers from "./privacy.js";
@@ -11,10 +12,7 @@ const PORT = parseInt(
   process.env.BACKEND_PORT || process.env.PORT || "3000",
   10
 );
-dotenv.config();
-console.log("MONGODB_URI:", process.env.MONGODB_URI);
-console.log("MONGODB_DB:", process.env.MONGODB_DB);
-console.log("MONGODB_COLLECTION:", process.env.MONGODB_COLLECTION);
+
 
 const STATIC_PATH =
   process.env.NODE_ENV === "production"
